@@ -662,13 +662,40 @@ img { max-width: 100%; display: block; }
 
 /* responsive */
 @media (max-width: 640px) {
-  .hero-stage { max-width: 92%; }
-  .folder-btn { width: 128px; }
-  .folder-experience { right: -4%; top: 14%; }
-  .folder-project { left: -6%; top: 44%; }
-  .folder-activities { right: -6%; top: 72%; }
-  .bubble { width: 190px; top: 24%; }
-  .stack-row img { width: 170px; }
+  .hero-stage { max-width: 94%; }
+  .folder-btn { width: 118px; }
+  .folder-btn .folder-label { font-size: 12.5px; top: 38%; }
+  .folder-experience { right: -3%; top: 14%; }
+  .folder-project { left: -5%; top: 44%; }
+  .folder-activities { right: -5%; top: 72%; }
+  .bubble { width: 170px; top: 24%; }
+  .stack-row { max-width: 66%; }
+  .stack-row img { width: 150px; }
   .nav-links { gap: 16px; }
   .nav-links a { font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+  .hero-stage { max-width: 96%; }
+  .folder-btn { width: 96px; }
+  .folder-btn .folder-label { font-size: 11px; left: 14%; top: 36%; }
+  .folder-experience { right: -1%; top: 13%; }
+  .folder-project { left: -3%; top: 45%; }
+  .folder-activities { right: -3%; top: 74%; }
+  .bubble { width: 145px; top: 21%; }
+  .stack-row { max-width: 58%; }
+  .stack-row img { width: 125px; }
+  .nav-links { gap: 10px; }
+  .nav-links a { font-size: 12px; }
+  .nav-logo { font-size: 16px; }
+}
+
+@media (max-width: 360px) {
+  .folder-btn { width: 82px; }
+  .folder-btn .folder-label { font-size: 10px; left: 13%; top: 34%; }
+  .folder-experience { right: 0; top: 12%; }
+  .folder-project { left: -2%; top: 45%; }
+  .folder-activities { right: -2%; top: 75%; }
+  .bubble { width: 128px; top: 19%; }
+  .stack-row img { width: 108px; }
 }
