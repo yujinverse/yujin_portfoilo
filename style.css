@@ -284,6 +284,41 @@ img { max-width: 100%; display: block; }
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* "click here!" hint pointing at the folders */
+.hint {
+  position: absolute;
+  top: 4%;
+  right: 18%;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0;
+  pointer-events: none;
+  animation: hintBounce 2.4s ease-in-out infinite;
+}
+
+.hint-text {
+  font-family: "Segoe Script", "Bradley Hand", "Comic Sans MS", "Apple SD Gothic Neo", cursive;
+  font-size: 17px;
+  font-weight: 700;
+  color: #FF6FA5;
+  transform: rotate(-6deg);
+  text-shadow: 0 2px 6px rgba(16, 24, 43, 0.1);
+  white-space: nowrap;
+}
+
+.hint-arrow {
+  width: 46px;
+  height: 40px;
+  margin-top: 2px;
+}
+
+@keyframes hintBounce {
+  0%, 100% { transform: translateY(0) rotate(-2deg); }
+  50% { transform: translateY(-5px) rotate(2deg); }
+}
+
 .folder-experience { top: 16%; right: -6%; animation-duration: 5.4s; animation-delay: 0s; }
 .folder-project { top: 46%; left: -12%; animation-duration: 6.2s; animation-delay: 0.7s; }
 .folder-activities { top: 74%; right: -14%; animation-duration: 5.8s; animation-delay: 1.4s; }
@@ -641,7 +676,7 @@ img { max-width: 100%; display: block; }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-title, .hero-stage, .hero-stage::before, .page-title, .page-sub,
-  .bubble, .folder-btn, .stack-row {
+  .bubble, .folder-btn, .stack-row, .hint {
     animation: none !important;
   }
   .reveal {
@@ -663,6 +698,9 @@ img { max-width: 100%; display: block; }
 /* responsive */
 @media (max-width: 640px) {
   .hero-stage { max-width: 94%; }
+  .hint { top: 5%; right: 16%; }
+  .hint-text { font-size: 15px; }
+  .hint-arrow { width: 38px; height: 34px; }
   .folder-btn { width: 118px; }
   .folder-btn .folder-label { font-size: 12.5px; top: 38%; }
   .folder-experience { right: -3%; top: 14%; }
@@ -677,6 +715,9 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 480px) {
   .hero-stage { max-width: 96%; }
+  .hint { top: 4%; right: 14%; }
+  .hint-text { font-size: 13.5px; }
+  .hint-arrow { width: 32px; height: 28px; }
   .folder-btn { width: 96px; }
   .folder-btn .folder-label { font-size: 11px; left: 14%; top: 36%; }
   .folder-experience { right: -1%; top: 13%; }
